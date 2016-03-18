@@ -1,0 +1,24 @@
+{
+  "name": "nothern-latitudes.github.io",
+  "homepage": "http://northern-latitudes.github.io/",
+  "authors": [
+    "Josh Bradley <jbradley@arcticlcc.org>"
+  ],
+  "description": "Northern Latitudes Jekyll website",
+  "main": "",
+  "moduleType": [],
+  "license": "CC BY 4.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "jquery-lifestream": "https://github.com/christianvuerings/jquery-lifestream.git#0.5.5"
+  }
+}
