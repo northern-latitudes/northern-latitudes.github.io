@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+</head>
+
+<body>
+    <div id="mapid" style="width: 414px; height: 340px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="http://zimmicz.github.io/Leaflet-Coordinates-Control/Control.Coordinates.js"></script>
+    <script>
+        var map = L.map('mapid', {
+            minZoom: 0,
+            maxZoom: 0,
+            zoomControl: false,
+            crs: L.CRS.Simple
+        }).setView([-227, 276], 0);
+        //   var southWest = map.unproject([-866766.6076, -3738385.7835], map.getMaxZoom());
+        //var northEast = map.unproject([6418133.0933, 2257828.1061], map.getMaxZoom());
+        // var southWest = [-866766.6076, -3738385.7835];
+        //var northEast = [6418133.0933, 2257828.1061];
+        var scale = 0.75;
+
+        var w = 552 * scale, //1104,
+            h = 454 * scale; //909;
+        var southWest = map.unproject([0, h], map.getMaxZoom());
+        var northEast = map.unproject([w, 0], map.getMaxZoom());
+        // map.setMaxBounds(new L.LatLngBounds([0,1500], [1500,0] ));
+        map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
+        var imageUrl = 'assets/images/bm.jpg',
+            imageBounds = [southWest, northEast];
+        //imageBounds = [[0,500], [500,0]];
+
+        L.imageOverlay(imageUrl, imageBounds).addTo(map);
+        var lcc;
+        var highlightFeature = function(e) {
+            var layer = e.target;
+
+            layer.setStyle({
+                weight: 5,
+                stroke: true,
+                fillOpacity: 0.7
+            });
+
+            if (!L.Browser.ie && !L.Browser.opera) {
+                layer.bringToFront();
+            }
+        };
+        var resetHighlight = function(e) {
+            lcc.resetStyle(e.target);
+        }
+        var styles = {
+            'absi': {
+                fillColor: "#FFFF00",
+                stroke: true,
+                weight: 3,
+                color: "#FFFF00",
+                fillOpacity: 0.3
+            },
+            'arctic': {
+                color: "#00ff00",
+                fillColor: "#00ff00",
+                stroke: false,
+                fillOpacity: 0.3
+            },
+            'nwb': {
+                color: "#EF0E40",
+                fillColor: "#EF0E40",
+                stroke: false,
+                fillOpacity: 0.3
+            },
+            'wa': {
+                color: "#EF5C0E",
+                fillColor: "#EF5C0E",
+                stroke: false,
+                fillOpacity: 0.3
+            },
+            'np': {
+                color: "#7B0EEF",
+                fillColor: "#7B0EEF",
+                stroke: false,
+                fillOpacity: 0.3
+            }
+        };
+        lcc = new L.geoJson(null, {
+            fill: true,
+            style: function(feature) {
+              return styles[feature.properties.id];
+            },
+            onEachFeature: function(feature, layer) {
+                    layer.bindPopup(feature.properties.name);
+                    layer._leaflet_id = feature.properties.id;
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight
+                    });
+                }
+                /*  coordsToLatLng: function(newcoords) {
+                return (map.unproject([((newcoords[0]  * w) / 7284899.7009)+131,
+                 (-(newcoords[1]* h) / 5996213.8896)+340], map.getMaxZoom()));
+        }*/
+                /*  coordsToLatLng: function(newcoords) {
+                return (map.unproject([((newcoords[0]  * w) / 7284899.7009)+65.5,
+                 (-(newcoords[1]* h) / 5996213.8896)+170], map.getMaxZoom()));
+        }*/
+                  ,coordsToLatLng: function(newcoords) {
+                return (map.unproject([((newcoords[0]  * scale)),
+                 (-(newcoords[1]* scale))], map.getMaxZoom()));
+        }
+        }).on('featureClick', function(e, pos, latlng, data) {
+            console.info(arguments);
+        });
+        lcc.addTo(map);
+
+        $.ajax({
+            dataType: "json",
+            url: "assets/lcc_1.geojson",
+            success: function(data) {
+                $(data.features).each(function(key, data) {
+                    lcc.addData(data);
+                });
+            }
+        }).error(function() {});
+
+        var c = new L.Control.Coordinates();
+        c.addTo(map);
+
+        function onMapClick(e) {
+            c.setCoordinates(e);
+        }
+
+        map.on('click', onMapClick);
+
+        L.layerGroup([L.marker([-273 *scale, 210 *scale])
+            .bindPopup("<b>AK CSC:  University of Alaska Fairbanks</b>"),
+            L.marker([-283 *scale, 293 *scale])
+            .bindPopup("<b>AK CSC: University of Alaska Anchorage</b>"),
+            L.marker([-230 * scale, 229 *scale])
+            .bindPopup("<b>AK CSC: University of Alaska Southeast</b>")
+        ]).addTo(map);
+
+
+        /*	L.circle([51.508, -0.11], 500, {
+        		color: 'red',
+        		fillColor: '#f03',
+        		fillOpacity: 0.5
+        	}).addTo(mymap).bindPopup("I am a circle.");
+
+        	L.polygon([
+        		[51.509, -0.08],
+        		[51.503, -0.06],
+        		[51.51, -0.047]
+        	]).addTo(mymap).bindPopup("I am a polygon.");
+
+
+        	var popup = L.popup();
+
+        	function onMapClick(e) {
+        		popup
+        			.setLatLng(e.latlng)
+        			.setContent("You clicked the map at " + e.latlng.toString())
+        			.openOn(mymap);
+        	}
+
+        	mymap.on('click', onMapClick);*/
+    </script>
+</body>
+
+</html>

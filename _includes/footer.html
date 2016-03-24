@@ -1,38 +1,59 @@
-<footer class="site-footer">
+<footer class="site-footer navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="footer-license text-center">
+            <a class="contact-link hint--rounded hint--left" href="#"
+             data-hint="Scroll to Contacts">
+              <span class="fa fa-arrow-circle-down"></span>
+            </a>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+            <br /> This work is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </div>
 
-  <div class="wrapper">
+        <div id="footer" class="footer-content text-center collapse">
+            <div class="row">
+              <div class="footer-card col-md-2">
+                <h2 class="header">{{ site.title }}</h2>
+                <p class="rss-subscribe">
+                  Subscribe <a href="{{ " /feed.xml " | prepend: site.github.url }}"> <i class="fa fa-rss"> </i>via RSS</a>
+                </p>
+              </div>
+            <div class="col-md-10">
+            <div class="row">
+              {% assign orgs = site.data.orgs | sort %}
+              {% for org_hash in orgs %}
+              {% assign org = org_hash[1] %}
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+              <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                      <div>
+                        <a href="{{ org.link }}">
+                          <img class="media-object logo-300" src="{{ site.github.url }}/assets/images/logos/{{ org_hash[0] }}300.jpg" alt="{{ org.name }}">
+                        </a>
+                      </div>
+                      <div class="caption">
+                        <h3 class="">{{ org.name }}</h3>
+                        <address>
+                          {{ org.street }}<br>
+                          {{ org.citystate }}<br>
+                        </address>
+                        {% for m in org.members %}
+                        <address>
+                          <strong>{{m.name}}</strong><br>
+                          {{ m.title }}<br>
+                          <a href="mailto:{{m.email}}">{{ m.email }}</a><br>
+                          <abbr title="Phone">P:</abbr> {{ m.phone }}
+                        </address>
+                        {% endfor %}
+                      </div>
+                  </div>
+                </div>
+              {% endfor %}
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+            </div>
+            </div>
+            </div>
+        </div>
     </div>
-
-  </div>
-
 </footer>

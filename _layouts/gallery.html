@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="main-body">
+
+    {% include header.html %}
+
+    <div class="container-fluid content-wrapper">
+      <div class="content-outer">
+        <div class="content-inner">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+    <script type="text/javascript">
+      $(document)
+        .ready(function() {
+          $('.row .thumbnail img')
+            .click(function() {
+              var thb = $(this).parent('.thumbnail');
+              var idx = thb
+                .parents('div')
+                .index();
+              var id = parseInt(idx);
+              // show the modal
+              $('#galleryModal').modal('show');
+              // slide carousel to selected
+              $('#carousel-gallery').carousel(id);
+              //set title
+              //$('.modal-title').html(thb.find('h3.photo-label').text());
+              $('.modal-title').html($(this).attr("alt"));
+            });
+
+          /* change modal title when slide changes */
+          $('#carousel-gallery').bind('slid.bs.carousel', function() {
+            $('.modal-title').html($(this).find('.active img').attr("alt"));
+          });
+        });
+    </script>
+  </body>
+
+</html>

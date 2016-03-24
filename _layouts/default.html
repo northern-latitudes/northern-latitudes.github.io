@@ -3,18 +3,35 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="main-body">
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="container-fluid content-wrapper">
+      <div class="content-outer row">
+        <div class="content-inner col-xs-12 col-md-8 col-md-offset-2">
+          {{ content }}
+        </div>
       </div>
     </div>
 
     {% include footer.html %}
+    {% include scripts.html %}
 
+    {% assign orgs = site.data.orgs | sort %}
+    <script>
+        $('#feed-list').FeedBS({
+            feedUrls: [
+              {% for org in orgs %}
+              {
+                url: '{{ org[1].feed }}',
+                icon: '/assets/images/logos/{{ org[0] }}300.jpg'
+              } {% unless forloop.last %}, {% endunless %}
+            {% endfor %}],
+            maxCount: 2,
+            descCharacterLimit: 150
+        });
+    </script>
   </body>
 
 </html>

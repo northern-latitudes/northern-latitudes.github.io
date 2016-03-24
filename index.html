@@ -1,23 +1,100 @@
 ---
 layout: default
 ---
-
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <div class="jumbotron">
+        <h1>About Us</h1>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-4 text-center">
+                <img class="map-globe" src="assets/images/globe_400.png" alt="Location on Globe">
+            </div>
+            <div class="col-sm-6 col-md-7 col-lg-6">
+                <p>Exercitation dolor nisi id sint sint culpa labore sint culpa eiusmod labore. Id in aliqua aliqua sunt elit laboris id et. Dolor incididunt officia culpa enim Lorem eiusmod cupidatat veniam laboris ad ut ex esse consequat ex occaecat. Consectetur
+                    ut ipsum qui eiusmod aliqua sint occaecat adipisicing id mollit quis ut.</p>
+                <p><a class="btn btn-primary btn-lg" href="{{ 'about' | prepend: site.github.url }}" role="button">Learn more</a></p>
+            </div>
+        </div>
+        <div class="row jumbo-logo visible-md-block visible-lg-block">
+            <div class="col-md-12 logo-row">
+                <div class="row visible-md-block">
+                    {% assign orgs = site.data.orgs | sort %}
+                    {% for org in orgs %}
+                    <div class="col-md-2">
+                        <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
+                            <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-4 visible-lg-block">
+                <div class="row">
+                    {% for org in orgs %}
+                    <div class="col-md-12 col-lg-6">
+                        <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
+                            <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-8 col-lg-offset-0 text-center">
+                <div id="ovmap" style="width: 469px; height: 386px; margin:auto;"></div>
+                <h4 class="map-caption">Hover over the map or a logo to view the focus area.</h4>
+            </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="row">
+        <!-- Feed -->
+        <div id="feed-list" class="col-md-6">
+            <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-heading">News
+                  <div class="feed-spinner pull-right"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
+                </div>
+                <div class="panel-body">
+                    <p>Fugiat fugiat ipsum sit aliquip ipsum adipisicing pariatur ullamco.</p>
+                </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                <ul class="list-group media-list post-list">
+                </ul>
+            </div>
+        </div>
 
+        <!-- Posts -->
+        <div id="news-list" class="col-md-6">
+            <div class="panel panel-info">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Announcements</div>
+                <div class="panel-body">
+                    <p>Fugiat fugiat ipsum sit aliquip ipsum adipisicing pariatur ullamco.</p>
+                </div>
+
+                <ul class="list-group media-list post-list">
+                    {% for post in site.posts %}
+                    <li class="list-group-item media">
+                        <div class="media-left">
+                            <a href="{{ post.url | prepend: site.github.url }}">
+                              <img class="media-object"
+                                src="{% if post.icon %}
+                                {{site.github.url}}/assets/images/logos/{{post.icon}}300.jpg
+                                {% else %}
+                                {{site.github.url}}/assets/images/logo_90.png{% endif %}" alt="Post Icon">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            <h4 class="media-heading">
+                              <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+                            </h4> {{ post.excerpt }}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

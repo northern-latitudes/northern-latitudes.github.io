@@ -19,6 +19,8 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "^4.5.0",
-    "jquery-lifestream": "https://github.com/christianvuerings/jquery-lifestream.git#0.5.5"
+    "jquery-lifestream": "https://github.com/christianvuerings/jquery-lifestream.git#0.5.5",
+    "waypoints": "^4.0.0",
+    "hint.css": "^2.2.1"
   }
 }

@@ -11,10 +11,19 @@ email: hello@northernlatitudes.org
 description: >
   Alaska-based Landscape Conservation Cooperatives and Alaska
   Climate Science Center
-baseurl: "" # the subpath of your site, e.g. /blog
+github:
+  url: http://192.168.56.101:4000
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "northern-latitudes.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  northern-latitudes
 
 # Build settings
 markdown: kramdown
+
+#sass
+sass:
+  load_paths:
+    - _sass
+    - bower_components/bootstrap-sass/assets/stylesheets
+    - bower_components/hint.css
