@@ -13,9 +13,9 @@ description: >
   Climate Science Center
 github:
   #url: http://localhost:4000
-  url: http://northern-latitudes.github.io
+  url: http://northernlatitudes.org
 #baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://northern-latitudes.github.io" # the base hostname & protocol for your site
+url: "http://northernlatitudes.org" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  northern-latitudes
 
