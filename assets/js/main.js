@@ -206,7 +206,7 @@ $(document)
       var fg = L.featureGroup([L.marker([-273 * scale, 210 * scale], {
             icon: myIcon,
             text: 'AK CSC:  University of Alaska Anchorage',
-            hint: 'left'
+            hint: 'bottom-left'
           }),
           //.bindPopup("<b>AK CSC:  University of Alaska Anchorage</b>"),
           L.marker([-283 * scale, 293 * scale], {
