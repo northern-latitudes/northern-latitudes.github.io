@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: Gallery
-permalink: /gallery/
+#permalink: /gallery/
 gallery: true
 fullbase: http://data.arcticlcc.org/climate/
 ---
