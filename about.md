@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-#permalink: /about/
+permalink: /about/
 ---
 
 Aliquip proident est enim incididunt deserunt aliquip fugiat proident cillum adipisicing dolore aliqua Lorem. Sint deserunt laboris consequat veniam labore mollit exercitation. Adipisicing minim voluptate excepteur in enim mollit enim. Deserunt excepteur qui non tempor nostrud nulla et nisi aliquip aliquip dolor voluptate sint. Officia ipsum cillum id labore est velit deserunt consequat deserunt incididunt nisi aliquip commodo nostrud qui. Ipsum labore amet irure laborum pariatur voluptate aliquip in consectetur commodo excepteur ut pariatur.
