@@ -1,0 +1,35 @@
+{
+  "name": "northern-latitudes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "grunt": "^0.4.5",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.4.1"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-minjson": "^0.4.0",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northern-latitudes/northern-latitudes.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northern-latitudes/northern-latitudes.github.io/issues"
+  },
+  "homepage": "https://github.com/northern-latitudes/northern-latitudes.github.io#readme"
+}
