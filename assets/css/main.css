@@ -6705,7 +6705,11 @@ footer.site-footer {
       display: none; }
   @media (min-width: 768px) {
     footer.site-footer {
-      position: fixed; } }
+      position: fixed; }
+      footer.site-footer.init {
+        position: relative; }
+        footer.site-footer.init #footer {
+          display: block; } }
   footer.site-footer abbr[title], footer.site-footer abbr[data-original-title] {
     border-color: #fff; }
   footer.site-footer .footer-license a,
@@ -6773,6 +6777,9 @@ footer.site-footer {
       right: 15px; }
       .jumbo-logo #ovmap .leaflet-bottom.leaflet-right > div {
         border-radius: 2px; }
+  .jumbo-logo .leaflet-marker-icon[data-hint] {
+    position: absolute;
+    display: block; }
 
 #feed-list .panel, #news-list .panel {
   border: 0; }

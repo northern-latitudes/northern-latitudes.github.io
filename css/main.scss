@@ -105,6 +105,14 @@ footer.site-footer {
 
   @media (min-width: $grid-float-breakpoint) {
     position: fixed;
+
+    &.init {
+      position: relative;
+
+      #footer {
+        display: block;
+      }
+    }
   }
 
   abbr[title], abbr[data-original-title] {
@@ -215,6 +223,11 @@ footer.site-footer {
         border-radius: 2px;
       }
     }
+  }
+
+  .leaflet-marker-icon[data-hint] {
+    position: absolute;
+    display: block;
   }
 }
 

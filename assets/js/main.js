@@ -1,5 +1,8 @@
 $(document)
   .ready(function () {
+    $('footer')
+      .removeClass('init');
+
     /**
      * Footer Expander
      */
@@ -206,7 +209,7 @@ $(document)
       var fg = L.featureGroup([L.marker([-273 * scale, 210 * scale], {
             icon: myIcon,
             text: 'AK CSC:  University of Alaska Anchorage',
-            hint: 'bottom-left'
+            hint: 'left'
           }),
           //.bindPopup("<b>AK CSC:  University of Alaska Anchorage</b>"),
           L.marker([-283 * scale, 293 * scale], {
