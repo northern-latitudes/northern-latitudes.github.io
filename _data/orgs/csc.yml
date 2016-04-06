@@ -1,15 +1,15 @@
-name: Arctic LCC
-street: 101 12th Ave., RM 216
-citystate: Fairbanks, AK 90701
-link: http://arcticlcc.org
+name: Alaska Climate Science Center
+street: 4210 University Drive
+citystate: Anchorage, AK 99508
+link: https://csc.alaska.edu/
 feed: https://csc.alaska.edu/resources/rss
 members:
-  - name: Nathan Hawkaluk
-    title: LCC Coordinator (interim)
-    email: nathan_hawkaluk@fws.gov
-    phone: (907) 456-0327
+  - name: Stephen T. Gray
+    title: Director
+    email: sgray@usgs.gov
+    phone: (907) 301-7830
 
-  - name: Josh Bradley
-    title: Science Coordinator (interim)
-    email: staff@arcticlcc.org
-    phone: (907) 455-1847
+  - name: T. Scott Rupp
+    title: Co-Director
+    email: tsrupp@alaska.edu
+    phone: (907) 474-7535

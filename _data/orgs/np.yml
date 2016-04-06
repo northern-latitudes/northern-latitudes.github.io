@@ -1,15 +1,15 @@
-name: Arctic LCC
-street: 101 12th Ave., RM 216
-citystate: Fairbanks, AK 90701
-link: http://arcticlcc.org
+name: North Pacific LCC
+street: 
+citystate: 
+link: http://www.northpacificlcc.org
 feed: http://northpacificlcc.org/rss?projection=1939
 members:
-  - name: Nathan Hawkaluk
-    title: LCC Coordinator (interim)
-    email: nathan_hawkaluk@fws.gov
-    phone: (907) 456-0327
+  - name: John Mankowski
+    title: LCC Coordinator
+    email: john_mankowski@fws.gov
+    phone: (360) 534-9330
 
-  - name: Josh Bradley
-    title: Science Coordinator (interim)
-    email: staff@arcticlcc.org
-    phone: (907) 455-1847
+  - name: Mary Mahaffy
+    title: Science Coordinator
+    email: mary_mahaffy@fws.gov
+    phone: (360) 753-7763

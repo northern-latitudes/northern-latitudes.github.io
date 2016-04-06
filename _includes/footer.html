@@ -24,7 +24,8 @@
               {% assign orgs = site.data.orgs | sort %}
               {% for org_hash in orgs %}
               {% assign org = org_hash[1] %}
-
+			  {% assign two = forloop.index | modulo: 2 %}
+			  {% assign three = forloop.index | modulo: 3 %}			  
               <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
                       <div>
@@ -37,6 +38,9 @@
                         <address>
                           {{ org.street }}<br>
                           {{ org.citystate }}<br>
+						  {% if org.twitter %} 
+						  <a href="https://twitter.com/{{ org.twitter }}"><span class="fa fa-twitter"> </span> {{ org.twitter }}</a>
+						  {% endif %}
                         </address>
                         {% for m in org.members %}
                         <address>
@@ -49,6 +53,12 @@
                       </div>
                   </div>
                 </div>
+				{% if two == 0 %}
+				<div class="clearfix visible-sm-block"></div>
+				{% endif %}
+				{% if three == 0 %}
+				<div class="clearfix visible-md-block visible-lg-block"></div>
+				{% endif %}
               {% endfor %}
 
             </div>

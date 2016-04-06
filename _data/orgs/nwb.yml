@@ -1,15 +1,10 @@
-name: Arctic LCC
-street: 101 12th Ave., RM 216
-citystate: Fairbanks, AK 90701
-link: http://arcticlcc.org
+name: Northwest Boreal LCC
+street: 1011 East Tudor Road
+citystate: Anchorage, AK 99503
+link: http://nwblcc.org
 feed: http://nwblcc.org/?feed=rss2
 members:
-  - name: Nathan Hawkaluk
-    title: LCC Coordinator (interim)
-    email: nathan_hawkaluk@fws.gov
-    phone: (907) 456-0327
-
-  - name: Josh Bradley
-    title: Science Coordinator (interim)
-    email: staff@arcticlcc.org
-    phone: (907) 455-1847
+  - name: Amanda Robertson
+    title: LCC Coordinator
+    email: amanda_robertson@fws.gov
+    phone: (907) 786-3694

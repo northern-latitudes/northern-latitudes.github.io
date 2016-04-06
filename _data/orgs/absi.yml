@@ -1,16 +1,16 @@
-name: Arctic LCC
-street: 101 12th Ave., RM 216
-citystate: Fairbanks, AK 90701
-link: http://arcticlcc.org
+name: Aleutian and Bering Sea Islands LCC
+street: 1011 East Tudor Road
+citystate: Anchorage, AK 99503
+link: https://absilcc.org
 feed: https://absilcc.org/outreach/_layouts/listfeed.aspx?List=%7BD47F0C5A-E7A5-4A86-8CB1-BCA8EB5F2268%7D
 twitter: absilcc
 members:
-  - name: Nathan Hawkaluk
-    title: LCC Coordinator (interim)
-    email: nathan_hawkaluk@fws.gov
-    phone: (907) 456-0327
+  - name: Douglas Burn
+    title: LCC Coordinator
+    email: douglas_burn@fws.gov
+    phone: (907) 786-3807
 
-  - name: Josh Bradley
-    title: Science Coordinator (interim)
-    email: staff@arcticlcc.org
-    phone: (907) 455-1847
+  - name: Aaron Poe
+    title: Science Coordinator
+    email: aaron_poe@fws
+    phone: (907) 786-3834
