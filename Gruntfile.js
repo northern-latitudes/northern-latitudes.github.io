@@ -42,18 +42,43 @@ module.exports = function (grunt) {
     },
     watch: {
       css: {
-        files: '/**/*.scss',
-        tasks: ['sass'],
+        files: [
+          './css/**/*.scss',
+          './_sass/**/*.scss',
+        ],
+        tasks: ['sass','jekyll'],
         options: {
           livereload: true,
         },
       },
       scripts: {
-        files: ['**/*.js'],
-        //tasks: ['jshint'],
+        files: ['./assets/**/*.js'],
+        tasks: ['uglify', 'jekyll'],
+        options: {},
+      },
+      html: {
+        files: [
+          './_includes/**/*.html',
+          './_layouts/**/*.html',
+          './_posts/**/*.html',
+          './*.html'
+        ],
+        tasks: ['jekyll'],
         options: {},
       },
     },
+    jekyll: { // Task
+      options: { // Universal options
+        bundleExec: true,
+        //src: '<%= app %>'
+      },
+      dist: { // Target
+        options: { // Target options
+          //dest: '<%= dist %>',
+          config: '_config.yml'
+        }
+      }
+    }
   });
 
   // Load the plugin that provides the "uglify" task.

@@ -49,14 +49,14 @@ fullbase: http://data.arcticlcc.org/climate/
 
 
 <!-- Modal -->
-<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel">
+<div class="modal fade" id="gallery-modal" tabindex="-1" role="dialog" aria-labelledby="gallery-modalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="galleryModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="gallery-modalLabel">Modal title</h4>
             </div>
             <div class="modal-body">
                 <div id="carousel-gallery" class="carousel slide" data-ride="carousel" data-interval="false">

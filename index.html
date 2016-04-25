@@ -4,12 +4,11 @@ layout: default
 <div class="home">
 
     <div class="jumbotron">
-        <h1>About Us</h1>
         <div class="row">
-            <div class="col-sm-6 col-md-5 col-lg-4 text-center">
+            <div class="col-sm-6 col-md-5 col-lg-3 text-center">
                 <img class="map-globe" src="assets/images/globe_400.png" alt="Location on Globe">
             </div>
-            <div class="col-sm-6 col-md-7 col-lg-6">
+            <div class="col-sm-6 col-md-7 col-lg-9">
                 <p>Exercitation dolor nisi id sint sint culpa labore sint culpa eiusmod labore. Id in aliqua aliqua sunt elit laboris id et. Dolor incididunt officia culpa enim Lorem eiusmod cupidatat veniam laboris ad ut ex esse consequat ex occaecat. Consectetur
                     ut ipsum qui eiusmod aliqua sint occaecat adipisicing id mollit quis ut.</p>
                 <p><a class="btn btn-primary btn-lg" href="{{ '/about' | prepend: site.github.url }}" role="button">Learn more</a></p>
@@ -55,12 +54,11 @@ layout: default
                 <div class="panel-heading">News
                   <div class="feed-spinner pull-right"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
                 </div>
-                <div class="panel-body">
-                    <p>Fugiat fugiat ipsum sit aliquip ipsum adipisicing pariatur ullamco.</p>
-                </div>
-
                 <ul class="list-group media-list post-list">
                 </ul>
+                <div class="panel-body show-more text-center">
+                  <a class="btn btn-success btn-sm" href="#">More</a>
+                </div>
             </div>
         </div>
 
@@ -69,9 +67,6 @@ layout: default
             <div class="panel panel-info">
                 <!-- Default panel contents -->
                 <div class="panel-heading">Announcements</div>
-                <div class="panel-body">
-                    <p>Fugiat fugiat ipsum sit aliquip ipsum adipisicing pariatur ullamco.</p>
-                </div>
 
                 <ul class="list-group media-list post-list">
                     {% for post in site.posts %}

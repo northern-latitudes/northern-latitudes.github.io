@@ -5844,7 +5844,7 @@ button.close {
     font-size: 18px;
     line-height: 90px;
     height: 130px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .navbar-big .navbar-collapse {
       border-top: 3px solid #85CB33;
       background-color: #f5fbee; }
@@ -6669,10 +6669,6 @@ input,
   .content-wrapper article.post {
     color: #fff; }
 
-.content-outer {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5e4fc+0,dcfcb5+76,fcf4b5+100 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0f1f9+0,eef9e0+76,f9f6e0+100 */ }
-
 .content-inner {
   min-height: 600px;
   padding-top: 20px; }
@@ -6689,7 +6685,7 @@ input,
       width: 100%; }
   @media (min-width: 768px) {
     .site-header .navbar-header {
-      width: 60%; }
+      width: 55%; }
     .site-header .navbar-brand {
       max-width: 100%; }
       .site-header .navbar-brand > img {
@@ -6710,7 +6706,8 @@ footer.site-footer {
         position: relative; }
         footer.site-footer.init #footer {
           display: block; } }
-  footer.site-footer abbr[title], footer.site-footer abbr[data-original-title] {
+  footer.site-footer abbr[title],
+  footer.site-footer abbr[data-original-title] {
     border-color: #fff; }
   footer.site-footer .footer-license a,
   footer.site-footer .footer-card a {
@@ -6747,7 +6744,7 @@ footer.site-footer {
 
 .jumbo-logo {
   padding-top: 45px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-top: 2px solid #DFD7CA; }
   .jumbo-logo .thumbnail {
     background-color: #fff; }
@@ -6787,6 +6784,9 @@ footer.site-footer {
 #feed-list .media, #news-list .media {
   margin-top: 0; }
 
+#feed-list .show-more, #news-list .show-more {
+  display: none; }
+
 #feed-list .media-left, #news-list .media-left {
   width: 25%; }
 
@@ -6808,19 +6808,20 @@ footer.site-footer {
 .thb-danger {
   background-color: #f2dede; }
 
-.carousel-control.left, .carousel-control.right {
+.carousel-control.left,
+.carousel-control.right {
   background-image: none; }
 
-#galleryModal .modal-content {
+#gallery-modal .modal-content {
   border: 0; }
 
-#galleryModal .modal-body {
+#gallery-modal .modal-body {
   background-color: #3E3F3A; }
-  #galleryModal .modal-body .thumbnail {
+  #gallery-modal .modal-body .thumbnail {
     background-color: inherit;
     padding: 0;
     border: 3px solid #FFF; }
-  #galleryModal .modal-body .carousel-caption {
+  #gallery-modal .modal-body .carousel-caption {
     padding: 10px;
     background-color: #3E3F3A;
     opacity: .75; }

@@ -9,7 +9,7 @@ $(document)
     $('.content-inner')
       .waypoint(function (direction) {
         //console.info(direction);
-        if (direction === 'down') {
+        if(direction === 'down') {
           $('footer')
             .addClass('max');
           $('.footer-content')
@@ -24,7 +24,7 @@ $(document)
 
     $('.content-inner')
       .waypoint(function (direction) {
-        if (direction === 'up' && $('footer')
+        if(direction === 'up' && $('footer')
           .hasClass('max')) {
           //console.info('flup');
 
@@ -63,7 +63,7 @@ $(document)
     /**
      * Leaflet Map
      */
-    if (!!$('#ovmap')
+    if(!!$('#ovmap')
       .length) {
       var scale = 0.85;
 
@@ -106,7 +106,7 @@ $(document)
           border: '2px solid ' + color
         });
 
-        if (!L.Browser.ie && !L.Browser.opera) {
+        if(!L.Browser.ie && !L.Browser.opera) {
           layer.bringToFront();
         }
       };
@@ -181,7 +181,7 @@ $(document)
             });
         },
         coordsToLatLng: function (newcoords) {
-          return (map.unproject([((newcoords[0] * scale)), (-(newcoords[
+          return(map.unproject([((newcoords[0] * scale)), (-(newcoords[
               1] *
             scale))], map.getMaxZoom()));
         }
@@ -273,18 +273,21 @@ $(document)
   $.fn.FeedBS = function (opt) {
     var def = $.extend({
       maxCount: 5,
+      maxTotalItems: 15,
+      maxShow: 5,
       showDesc: true,
       showPubDate: true,
       descCharacterLimit: 0,
       titleLinkTarget: "_blank",
       dateFormat: "",
-      dateFormatLang: "en"
+      dateFormatLang: "en",
+      dateLimit: 30
     }, opt);
 
     var id = '#' + $(this)
       .attr("id");
 
-    if (def.feedUrls === undefined) {
+    if(def.feedUrls === undefined) {
       return;
     }
 
@@ -306,85 +309,99 @@ $(document)
           "&format=json&diagnostics=false&callback=?",
         dataType: "json",
         success: function (data) {
-          if (!data.query.results) {
+          if(!data.query.results) {
             return;
           }
 
-          if (!(data.query.results.rss instanceof Array)) {
+          if(!(data.query.results.rss instanceof Array)) {
             data.query.results.rss = [data.query.results.rss];
           }
 
           $.each(data.query.results.rss, function (e, itm) {
-            var el = '';
-            el += ' <li class="list-group-item media">' +
-              '<div class="media-left">' +
-              '<a href="' + itm.channel
-              .item.link + '">' +
-              '<img class="media-object" src="' + feed.icon +
-              '" alt="...">' +
-              '</a></div><div class="media-body">';
-            if (def.showPubDate) {
-              var date = new Date(itm.channel.item.pubDate);
-              el += '<span class="post-meta">';
-              if ($.trim(def.dateFormat)
-                .length > 0) {
-                try {
-                  moment.lang(def.dateFormatLang);
-                  el += moment(date)
-                    .format(def.dateFormat);
-                } catch (err) {
+            if(!def.dateLimit || new Date(itm.channel.item.pubDate) >
+              new Date(Date.now() -
+                (def.dateLimit * 24 * 60 * 60 * 1000))) {
+              var el = '';
+              el += ' <li class="list-group-item media">' +
+                '<div class="media-left">' +
+                '<a href="' + itm.channel
+                .item.link + '">' +
+                '<img class="media-object" src="' + feed.icon +
+                '" alt="...">' +
+                '</a></div><div class="media-body">';
+              if(def.showPubDate) {
+                var date = new Date(itm.channel.item.pubDate);
+                el += '<span class="post-meta">';
+                if($.trim(def.dateFormat)
+                  .length > 0) {
+                  try {
+                    moment.lang(def.dateFormatLang);
+                    el += moment(date)
+                      .format(def.dateFormat);
+                  } catch(err) {
+                    el += date.toLocaleDateString();
+                  }
+                } else {
                   el += date.toLocaleDateString();
                 }
-              } else {
-                el += date.toLocaleDateString();
+                el +=
+                  ' </span><span class="fa fa-rss text-warning"></span>';
               }
               el +=
-                ' </span><span class="fa fa-rss text-warning"></span>';
-            }
-            el +=
-              '<h4 class="media-heading"><a class="post-link" href="' +
-              itm.channel
-              .item.link + '" target="' + def.titleLinkTarget +
-              '" >' + itm.channel.item.title + '</a></h4>';
-
-            if (def.showDesc) {
-              var text = $('<div>' + itm.channel.item.description +
-                  '</div>')
-                .text();
-              el += '<div class="post-description">';
-              if (def.descCharacterLimit > 0) {
-                el += text.succinct({
-                  size: def.descCharacterLimit
-                });
-              } else {
-                el += text;
-              }
-              el += '<a class="post-link" href="' +
+                '<h4 class="media-heading"><a class="post-link" href="' +
                 itm.channel
                 .item.link + '" target="' + def.titleLinkTarget +
-                '" >more</a>';
-              el += '</div></li>';
+                '" >' + itm.channel.item.title + '</a></h4>';
+
+              if(def.showDesc) {
+                var text = $('<div>' + itm.channel.item.description +
+                    '</div>')
+                  .text();
+                el += '<div class="post-description">';
+                if(def.descCharacterLimit > 0) {
+                  el += text.succinct({
+                    size: def.descCharacterLimit
+                  });
+                } else {
+                  el += text;
+                }
+                el += '<a class="post-link" href="' +
+                  itm.channel
+                  .item.link + '" target="' + def.titleLinkTarget +
+                  '" >more</a>';
+                el += '</div></li>';
+              }
+
+              $(el)
+                .hide()
+                .appendTo(list);
+
+              //sort
+              var listItems = list.find('.list-group-item');
+              list.empty();
+              listItems.sort(function (a, b) {
+                  return(new Date($(a)
+                      .find('.post-meta')
+                      .text())
+                    .getTime() > new Date($(b)
+                      .find('.post-meta')
+                      .text())
+                    .getTime() ? -1 : 1);
+
+                })
+                .appendTo(list);
+              listItems.slice(0, def.maxShow)
+                .fadeIn();
+              listItems.slice(def.maxShow, def.maxTotalItems +
+                  1)
+                .hide();
             }
-
-            $(el)
-              .hide()
-              .appendTo(list)
-              .fadeIn();
-
-            //sort
-            list.find('.list-group-item')
-              .sort(function (a, b) {
-                return (new Date($(a)
-                    .find('.post-meta')
-                    .text())
-                  .getTime() > new Date($(b)
-                    .find('.post-meta')
-                    .text())
-                  .getTime() ? -1 : 1);
-
-              })
-              .appendTo(list);
           });
+
+          if(def.maxShow < def.maxTotalItems) {
+            $('#feed-list .show-more')
+              .fadeIn();
+          }
 
           $('.feed-spinner')
             .fadeOut();
@@ -396,6 +413,15 @@ $(document)
     def.feedUrls.forEach(function (url) {
       getFeed(url);
     });
+
+    $('#feed-list .show-more .btn')
+      .click(function (e) {
+        e.preventDefault();
+        $('#feed-list .list-group-item:hidden')
+          .fadeIn();
+        Waypoint.refreshAll();
+        $(this).addClass('disabled');
+      });
 
     //$("#" + id).append(list);
 
@@ -426,14 +452,14 @@ $(document)
     var textDefault = this;
     var regex = /[!-\/:-@\[-`{-~]$/;
 
-    if (textDefault.length > settings.size) {
+    if(textDefault.length > settings.size) {
       textTruncated = $.trim(textDefault)
         .substring(0, settings.size)
         .split(' ')
         .slice(0, -1)
         .join(' ');
 
-      if (settings.ignore) {
+      if(settings.ignore) {
         textTruncated = textTruncated.replace(regex, '');
       }
       return textTruncated + settings.omission;

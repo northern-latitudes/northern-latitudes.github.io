@@ -54,7 +54,7 @@
       //width: 50%;
     }
 
-    @media (max-width: $grid-float-breakpoint) {
+    @media (max-width: $grid-float-breakpoint - 1) {
       border-top: 3px solid $brand-success;
       background-color: lighten($brand-success, 46%);
 

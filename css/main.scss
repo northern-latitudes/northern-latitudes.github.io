@@ -1,15 +1,17 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "variables", "bootstrap", "bootswatch", "hint";
+@import 'variables', 'bootstrap', 'bootswatch', 'hint';
 //add 5-column grid
-.col-lg-2-4{
+.col-lg-2-4 {
   @include make-lg-column(2.4)
 }
-.col-md-2-4{
+
+.col-md-2-4 {
   @include make-md-column(2.4)
 }
-.col-sm-2-4{
+
+.col-sm-2-4 {
   @include make-sm-column(2.4)
 }
 
@@ -29,21 +31,6 @@ body {
 .content-outer {
   //margin-bottom: 60px;
   //background-color: lighten($brand-info, 42%);
-  //
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5e4fc+0,dcfcb5+76,fcf4b5+100 */
-  //background: #b5e4fc; /* Old browsers */
-  //background: -moz-linear-gradient(top,  #b5e4fc 0%, #dcfcb5 76%, #fcf4b5 100%); /* FF3.6-15 */
-  //background: -webkit-linear-gradient(top,  #b5e4fc 0%,#dcfcb5 76%,#fcf4b5 100%); /* Chrome10-25,Safari5.1-6 */
-  //background: linear-gradient(to bottom,  #b5e4fc 0%,#dcfcb5 76%,#fcf4b5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5e4fc', endColorstr='#fcf4b5',GradientType=0 ); /* IE6-9 */
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0f1f9+0,eef9e0+76,f9f6e0+100 */
-  //background: #e0f1f9; /* Old browsers */
-  //background: -moz-linear-gradient(top,  #e0f1f9 0%, #eef9e0 76%, #f9f6e0 100%); /* FF3.6-15 */
-  //background: -webkit-linear-gradient(top,  #e0f1f9 0%,#eef9e0 76%,#f9f6e0 100%); /* Chrome10-25,Safari5.1-6 */
-  //background: linear-gradient(to bottom,  #e0f1f9 0%,#eef9e0 76%,#f9f6e0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f1f9', endColorstr='#f9f6e0',GradientType=0 ); /* IE6-9 */
-
 }
 
 .content-inner {
@@ -76,7 +63,7 @@ body {
 
   @media (min-width: $grid-float-breakpoint) {
     .navbar-header {
-      width: 60%;
+      width: 55%;
     }
 
     .navbar-brand {
@@ -115,7 +102,8 @@ footer.site-footer {
     }
   }
 
-  abbr[title], abbr[data-original-title] {
+  abbr[title],
+  abbr[data-original-title] {
     border-color: $body-bg;
   }
 
@@ -175,7 +163,7 @@ footer.site-footer {
 
 .jumbo-logo {
   padding-top: 45px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-top: 2px solid $thumbnail-border;
 
   .thumbnail {
@@ -240,12 +228,16 @@ footer.site-footer {
     margin-top: 0;
   }
 
+  .show-more {
+    display: none;
+  }
+
   .media-left {
     width: 25%;
   }
 
   img.media-object {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -270,11 +262,12 @@ footer.site-footer {
   background-color: $state-danger-bg;
 }
 
-.carousel-control.left,.carousel-control.right{
-  background-image:none;
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
 }
 
-#galleryModal {
+#gallery-modal {
   .modal-content {
     border: 0;
   }
