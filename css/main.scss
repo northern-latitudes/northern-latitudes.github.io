@@ -35,7 +35,7 @@ body {
 
 .content-inner {
   //background-color: $body-bg;
-  min-height: 600px;
+  min-height: 300px;
   padding-top: 20px;
   //padding-bottom: 60px;
 
@@ -100,6 +100,10 @@ footer.site-footer {
         display: block;
       }
     }
+  }
+
+  .small-text {
+    font-size: 12px;
   }
 
   abbr[title],

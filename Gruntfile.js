@@ -61,7 +61,15 @@ module.exports = function (grunt) {
           './_includes/**/*.html',
           './_layouts/**/*.html',
           './_posts/**/*.html',
-          './*.html'
+          './*.html',
+          './*.md'
+        ],
+        tasks: ['jekyll'],
+        options: {},
+      },
+      data: {
+        files: [
+          './_data/**/*.yml',
         ],
         tasks: ['jekyll'],
         options: {},

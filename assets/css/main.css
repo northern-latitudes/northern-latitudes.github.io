@@ -6670,7 +6670,7 @@ input,
     color: #fff; }
 
 .content-inner {
-  min-height: 600px;
+  min-height: 300px;
   padding-top: 20px; }
 
 .site-header {
@@ -6706,6 +6706,8 @@ footer.site-footer {
         position: relative; }
         footer.site-footer.init #footer {
           display: block; } }
+  footer.site-footer .small-text {
+    font-size: 12px; }
   footer.site-footer abbr[title],
   footer.site-footer abbr[data-original-title] {
     border-color: #fff; }
