@@ -50,7 +50,9 @@
                               <strong>{{m.name}}</strong><br>
                               {{ m.title }}<br>
                               <a href="mailto:{{m.email}}">{{ m.email }}</a><br>
+                              {% if m.phone %}
                               <abbr title="Phone">P:</abbr> {{ m.phone }}
+                              {% endif %}
                             </address>
                           </div>
                           {% endfor %}
