@@ -6667,7 +6667,8 @@ input,
 .content-wrapper {
   background-color: #0f618c; }
   .content-wrapper article.post {
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 30px; }
 
 .content-inner {
   min-height: 300px;
