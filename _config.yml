@@ -21,3 +21,56 @@ github_username:  northern-latitudes
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
+
+permalink: pretty
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://northernlatitudes.org'
+  relativeLinks: 'http://northernlatitudes.org/links.jsonp'
+  media: 'assets/media'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "date"
+        field:
+          element: "text"
+          value: CURRENT_DATETIME
+      - name: "icon"
+        field:
+          element: "multiselect"
+          label: "Logo"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Default"
+              value: ""
+            - name: "ABSI"
+              value: "absi"
+            - name: "Arctic"
+              value: "arctic"
+            - name: "AKCSC"
+              value: "csc"
+            - name: "North Pacific"
+              value: "np"
+            - name: "NWB"
+              value: "nwb"
+            - name: "Western AK"
+              value: "wa"
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Add Tags"
+          value: "annoucement"
