@@ -6684,9 +6684,11 @@ input,
     .site-header .navbar-brand > img {
       display: inline-block;
       width: 100%; }
+  .site-header .fa-facebook-square {
+    font-size: 150%; }
   @media (min-width: 768px) {
     .site-header .navbar-header {
-      width: 55%; }
+      width: 50%; }
     .site-header .navbar-brand {
       max-width: 100%; }
       .site-header .navbar-brand > img {

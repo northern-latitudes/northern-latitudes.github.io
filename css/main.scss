@@ -62,9 +62,13 @@ body {
     }
   }
 
+  .fa-facebook-square {
+    font-size: 150%;
+  }
+
   @media (min-width: $grid-float-breakpoint) {
     .navbar-header {
-      width: 55%;
+      width: 50%;
     }
 
     .navbar-brand {
