@@ -51,7 +51,7 @@ prose:
           value: CURRENT_DATETIME
       - name: "icon"
         field:
-          element: "multiselect"
+          element: "select"
           label: "Logo"
           placeholder: "Choose Tags"
           options:
