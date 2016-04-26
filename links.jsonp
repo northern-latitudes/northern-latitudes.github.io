@@ -1,8 +1,5 @@
 ---
-layout: null
-permalink: /links.jsonp
 ---
-
 {% assign orgs = site.data.orgs | sort %}
 callback([
   {% for org in orgs %}
