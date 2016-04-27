@@ -76,7 +76,7 @@ layout: default
                         <div class="media-left">
                             <a href="{{ post.url | prepend: site.github.url }}">
                               <img class="media-object"
-                                src="{% if post.icon %}
+                                src="{% if not post.icon == 'default' %}
                                 {{site.github.url}}/assets/images/logos/{{post.icon}}300.jpg
                                 {% else %}
                                 {{site.github.url}}/assets/images/logo_90.png{% endif %}" alt="Post Icon">
