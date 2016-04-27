@@ -45,6 +45,7 @@ prose:
         field:
           element: "text"
           label: "title"
+          value: "New Announcement"
       - name: "date"
         field:
           element: "text"
