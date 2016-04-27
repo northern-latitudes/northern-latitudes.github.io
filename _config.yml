@@ -57,7 +57,7 @@ prose:
           placeholder: "Choose Tags"
           options:
             - name: "Default"
-              value: false
+              value: nil
             - name: "ABSI"
               value: "absi"
             - name: "Arctic"
