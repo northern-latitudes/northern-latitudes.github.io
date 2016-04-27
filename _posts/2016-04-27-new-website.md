@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-04-27 11:37 -0800"
-icon: ""
+icon: nil
 tags: announcement
 published: true
 title: New Northern Latitudes website
