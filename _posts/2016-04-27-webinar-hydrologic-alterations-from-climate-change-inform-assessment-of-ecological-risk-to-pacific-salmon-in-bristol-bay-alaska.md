@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-04-27 14:14 -0800"
-icon: default
+icon: wa
 tags: announcement
 published: true
 title: "Webinar -- Hydrologic Alterations from Climate Change Inform Assessment of Ecological Risk to Pacific Salmon in Bristol Bay, Alaska  "
