@@ -4,19 +4,25 @@ layout: default
 <div class="home">
 
     <div class="jumbotron">
+        <div class="page-header">
+            <h2><em>Collaborative Conservation for a Changing North</em></h2>
+        </div>
         <div class="row">
             <div class="col-sm-6 col-md-5 col-lg-3 text-center">
                 <img class="map-globe" src="assets/images/globe_400.png" alt="Location on Globe">
             </div>
             <div class="col-sm-6 col-md-7 col-lg-9">
-              <p>Alaska and Northwest Canada's landscapes support vast, largely-intact landscapes that intertwine with the lives of thousands of people who live there. This biologically, geographically, and culturally diverse region is facing new stressors such as rapid
-                climate change. Meeting these monumental challenges require new ways of working together. Northern Latitudes supports collaboration among hundreds of organizations: federal and state agencies, non-governmental organizations, and Tribes/First Nations
-                across nearly 40 million square kilometers.
+              <p class="small">The vast and largely intact landscapes of Alaska and Northwest Canada support unique natural and cultural resources that are valued locally and globally. As climate-related impacts and land use changes rapidly alter these social-ecological systems, a
+                  new approach to conservation is needed. Landscape Conservation Cooperatives (LCCs) are an international collaborative effort that identifies shared conservation goals and a means to achieve them. Northern Latitudes is the leadership of the five LCCs
+                  within Alaska and Northern Canada and LCC and the Alaska Climate Science Center staff.
               </p>
               <p><a class="btn btn-primary btn-lg" href="{{ '/about' | prepend: site.github.url }}" role="button">Learn more</a></p>
             </div>
         </div>
         <div class="row jumbo-logo visible-md-block visible-lg-block">
+            <div class="page-header">
+                <h3>Who Is Northern Latitudes?</h3>
+            </div>
             <div class="col-md-12 logo-row">
                 <div class="row visible-md-block">
                     {% assign orgs = site.data.orgs | sort %}

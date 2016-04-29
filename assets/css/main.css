@@ -6668,11 +6668,20 @@ input,
   background-color: #0f618c; }
   .content-wrapper article.post {
     color: #fff;
-    margin-bottom: 30px; }
+    margin-bottom: 40px; }
 
 .content-inner {
   min-height: 300px;
   padding-top: 20px; }
+
+.jumbotron .page-header {
+  margin-top: 0; }
+  .jumbotron .page-header h2,
+  .jumbotron .page-header h3 {
+    margin-top: 0; }
+
+.jumbotron p.small {
+  font-size: 17px; }
 
 .site-header {
   border-bottom: 6px solid #85CB33; }
