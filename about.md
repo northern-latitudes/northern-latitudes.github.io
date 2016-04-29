@@ -4,13 +4,13 @@ title: About
 permalink: /about/
 ---
 
-<p class="lead">Northern Latitudes—leadership of the five LCCs within Alaska and Northern Canada
-and LCC and the Alaska Climate Science Center staff—represents shared conservation
+<p class="lead">Northern Latitudes - leadership of the five LCCs within Alaska and Northern Canada
+and LCC and the Alaska Climate Science Center staff - represents shared conservation
 priorities of hundreds of organizations: federal and state agencies, non-governmental
 organizations, and Tribes/First Nations across nearly 40 million square kilometers of
 vast and largely intact landscapes of Alaska and Northwest Canada.</p>
 
-These social-ecological systems support unique natural and cultural resources that are
+These social - ecological systems support unique natural and cultural resources that are
 valued by the public. The tundra, boreal forest, mountain ranges and marine
 environments are home to millions of migratory birds, hundreds of thousands of caribou,
 some of the world’s largest salmon runs, and many of the planet’s marine mammals. 
@@ -21,8 +21,8 @@ ecological systems, requiring us to approach conservation in innovative ways.
 
 # Conservation without Boundaries
 
-Landscape Conservation Cooperatives (LCC)—self-directed conservation
-partnerships—bring holistic, collaborative strategies to help ensure the ability of
+[Landscape Conservation Cooperatives (LCC)](https://lccnetwork.org/) - self-directed conservation
+partnerships - bring holistic, collaborative strategies to help ensure the ability of
 landscapes to sustain natural and cultural resources for current and future generations.
 Alaska’s five LCCs work across agency and jurisdictional boundaries to identify and
 achieve desired conservation outcomes.
