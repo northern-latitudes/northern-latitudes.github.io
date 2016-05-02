@@ -22,6 +22,7 @@ github_username:  northern-latitudes
 # Build settings
 markdown: kramdown
 encoding: utf-8
+future: true
 
 permalink: pretty
 
