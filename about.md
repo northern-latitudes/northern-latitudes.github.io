@@ -7,7 +7,7 @@ permalink: /about/
 <p class="lead">Northern Latitudes - leadership of the five LCCs within Alaska and Northern Canada
 and the Alaska Climate Science Center staff - represents shared conservation
 priorities of hundreds of organizations: federal and state agencies, non-governmental
-organizations, and Tribes/First Nations across nearly 40 million square kilometers of
+organizations, and Tribes/First Nations across nearly 12 million square kilometers of
 vast and largely intact landscapes of Alaska and Northwest Canada.</p>
 
 These social - ecological systems support unique natural and cultural resources that are
