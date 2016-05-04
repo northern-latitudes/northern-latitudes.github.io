@@ -6,4 +6,4 @@ tags: announcement
 published: true
 title: "For more news and events, visit, like, and follow us on Facebook!"
 ---
-[facebook.com.NorthLatitudes](http://facebook.com/northlatitudes)
+[http://facebook.com/northlatitudes](http://facebook.com/northlatitudes)
