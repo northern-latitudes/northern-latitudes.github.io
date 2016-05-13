@@ -1,14 +1,14 @@
 name: Arctic LCC
-street: 101 12th Ave., RM 216
-citystate: Fairbanks, AK 90701
+street: 1011 East Tudor Road
+citystate: Anchorage, AK 99503
 link: http://arcticlcc.org
 feed: http://arcticlcc.org/home/news/rss
 github: arcticlcc
 members:
-  - name: Nathan Hawkaluk
-    title: LCC Coordinator (interim)
-    email: nathan_hawkaluk@fws.gov
-    phone: (907) 456-0325
+  - name: Wendy Loya
+    title: LCC Coordinator
+    email: wendy_loya@fws.gov
+    phone: (907) 786-3532
 
   - name: Josh Bradley
     title: Science Coordinator (interim)
