@@ -6673,6 +6673,8 @@ input,
 .content-inner {
   min-height: 300px;
   padding-top: 20px; }
+  .content-inner .banner {
+    margin-bottom: 15px; }
 
 .jumbotron .page-header {
   margin-top: 0; }
@@ -6693,8 +6695,10 @@ input,
     .site-header .navbar-brand > img {
       display: inline-block;
       width: 100%; }
-  .site-header .fa-facebook-square {
-    font-size: 150%; }
+  .site-header .icon-link {
+    padding-right: 5px; }
+    .site-header .icon-link .fa {
+      font-size: 150%; }
   @media (min-width: 768px) {
     .site-header .navbar-header {
       width: 50%; }

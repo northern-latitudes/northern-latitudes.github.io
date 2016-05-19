@@ -40,6 +40,10 @@ body {
   padding-top: 20px;
   //padding-bottom: 60px;
 
+  .banner {
+    margin-bottom: 15px;
+  }
+  
   @media (min-width: $grid-float-breakpoint) {
     //padding-bottom: 250px;
   }
@@ -77,8 +81,12 @@ body {
     }
   }
 
-  .fa-facebook-square {
-    font-size: 150%;
+  .icon-link {
+    padding-right: 5px;
+
+    .fa {
+      font-size: 150%;
+    }
   }
 
   @media (min-width: $grid-float-breakpoint) {

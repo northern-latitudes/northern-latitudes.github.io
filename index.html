@@ -2,7 +2,12 @@
 layout: default
 ---
 <div class="home">
-
+    {% for banner in site.data.banner %}
+    <a class="btn btn-{{ banner.color }} btn-block banner" href="{{ banner.link }}">
+        <b> <i class="fa fa-{{ banner.icon }}"> </i>
+        {{ banner.text }} </b>
+    </a>
+    {% endfor %}
     <div class="jumbotron">
         <div class="page-header">
             <h2><em>Collaborative Conservation for a Changing North</em></h2>
