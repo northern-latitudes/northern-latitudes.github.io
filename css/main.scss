@@ -15,6 +15,11 @@
   @include make-sm-column(2.4)
 }
 
+.text-wrap {
+  white-space: normal;
+  word-break: break-word;
+}
+
 body {
   //padding-top: 60px;
   //padding-bottom: 60px;
@@ -43,7 +48,7 @@ body {
   .banner {
     margin-bottom: 15px;
   }
-  
+
   @media (min-width: $grid-float-breakpoint) {
     //padding-bottom: 250px;
   }

@@ -6664,6 +6664,10 @@ input,
       float: left;
       width: 20%; } }
 
+.text-wrap {
+  white-space: normal;
+  word-break: break-word; }
+
 .content-wrapper {
   background-color: #0f618c; }
   .content-wrapper article.post {

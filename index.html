@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="home">
     {% for banner in site.data.banner %}
-    <a class="btn btn-{{ banner.color }} btn-block banner" href="{{ banner.link }}">
+    <a class="btn btn-{{ banner.color }} btn-block banner text-wrap" href="{{ banner.link }}">
         <b> <i class="fa fa-{{ banner.icon }}"> </i>
         {{ banner.text }} </b>
     </a>
