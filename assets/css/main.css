@@ -6712,7 +6712,7 @@ input,
         max-width: 525px; } }
   @media (min-width: 1450px) {
     .site-header .navbar-header {
-      width: 50%; } }
+      width: 45%; } }
   @media (max-width: 1449px) {
     .site-header .navbar-brand {
       padding: 20px 0 0 15px;
