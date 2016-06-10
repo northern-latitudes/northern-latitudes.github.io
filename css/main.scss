@@ -96,7 +96,7 @@ body {
 
   @media (min-width: $grid-float-breakpoint) {
     .navbar-header {
-      width: 50%;
+      width: 100%;
     }
 
     .navbar-brand {
@@ -105,6 +105,21 @@ body {
       > img {
         max-width: 525px;
       }
+    }
+  }
+  @media (min-width: 1450px) {
+    .navbar-header {
+      width: 50%;
+    }
+  }
+  @media (max-width: 1449px) {
+    .navbar-brand {
+      padding: 20px 0 0 15px;
+      height: 110px;
+    }
+
+    .navbar-big .nav > li > a {
+      line-height: 35px;
     }
   }
 }

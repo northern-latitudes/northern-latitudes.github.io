@@ -6705,11 +6705,20 @@ input,
       font-size: 150%; }
   @media (min-width: 768px) {
     .site-header .navbar-header {
-      width: 50%; }
+      width: 100%; }
     .site-header .navbar-brand {
       max-width: 100%; }
       .site-header .navbar-brand > img {
         max-width: 525px; } }
+  @media (min-width: 1450px) {
+    .site-header .navbar-header {
+      width: 50%; } }
+  @media (max-width: 1449px) {
+    .site-header .navbar-brand {
+      padding: 20px 0 0 15px;
+      height: 110px; }
+    .site-header .navbar-big .nav > li > a {
+      line-height: 35px; } }
 
 footer.site-footer {
   padding: 10px;

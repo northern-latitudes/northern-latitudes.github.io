@@ -1,6 +1,6 @@
 <header class="site-header container-fluid">
   <div class="row">
-    <nav class="navbar navbar-inverse navbar-big col-xs-12 col-md-8 col-md-offset-2">
+    <nav class="navbar navbar-inverse navbar-big col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -28,6 +28,12 @@
                       </a>
                     </li>
                     <li><a class="page-link contact-link" href="#footer"><span>Contact</span></a></li>
+                    <li {% if "/" == page.url %}class="active"{% endif %}>
+                      <a class="page-link icon-link" href="{{ site.github.url }}">
+                        <span class="fa fa-home"></span>
+                        <span class="visible-xs-inline">Facebook</span>
+                      </a>
+                    </li>
                     <li>
                       <a class="page-link icon-link" href="https://www.facebook.com/northlatitudes">
                         <span class="fa fa-facebook-square"></span>
