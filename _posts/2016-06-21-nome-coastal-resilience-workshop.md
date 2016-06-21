@@ -9,4 +9,4 @@ tags:
   - climate change
   - community
 ---
-[Agenda](assets/media/WorkshopAgendaforWeb.pdf)
+[Agenda](/assets/media/WorkshopAgendaforWeb.pdf)
