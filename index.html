@@ -24,36 +24,38 @@ layout: default
               <p><a class="btn btn-primary btn-lg" href="{{ '/about' | prepend: site.github.url }}" role="button">Learn more</a></p>
             </div>
         </div>
-        <div class="row jumbo-logo visible-md-block visible-lg-block">
+        <div class="jumbo-logo visible-md-block visible-lg-block">
             <div class="page-header">
                 <h3>Who Is Northern Latitudes?</h3>
             </div>
-            <div class="col-md-12 logo-row">
-                <div class="row visible-md-block">
-                    {% assign orgs = site.data.orgs | sort %}
-                    {% for org in orgs %}
-                    <div class="col-md-2">
-                        <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
-                            <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="col-md-2 col-lg-4 visible-lg-block">
-                <div class="row">
-                    {% for org in orgs %}
-                    <div class="col-md-12 col-lg-6">
-                        <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
-                            <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-8 col-lg-offset-0 text-center">
-                <div id="ovmap" style="width: 469px; height: 386px; margin:auto;"></div>
-                <h4 class="map-caption">Hover over the map or a logo to view the focus area.</h4>
+            <div class="row">
+              <div class="col-md-12 logo-row">
+                  <div class="row visible-md-block">
+                      {% assign orgs = site.data.orgs | sort %}
+                      {% for org in orgs %}
+                      <div class="col-md-2">
+                          <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
+                              <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
+                          </a>
+                      </div>
+                      {% endfor %}
+                  </div>
+              </div>
+              <div class="col-md-2 col-lg-4 visible-lg-block">
+                  <div class="row">
+                      {% for org in orgs %}
+                      <div class="col-md-12 col-lg-6">
+                          <a class="thumbnail" data-mapid="{{ org[0] }}" href="{{ org[1].link }}">
+                              <img class="logo-300" src="/assets/images/logos/{{ org[0] }}300.jpg" alt="{{ org[1].name }}">
+                          </a>
+                      </div>
+                      {% endfor %}
+                  </div>
+              </div>
+              <div class="col-md-12 col-lg-8 col-lg-offset-0 text-center">
+                  <div id="ovmap" style="width: 469px; height: 386px; margin:auto;"></div>
+                  <h4 class="map-caption">Hover over the map or a logo to view the focus area.</h4>
+              </div>
             </div>
 
         </div>
@@ -61,13 +63,13 @@ layout: default
 
     <div class="row">
         <!-- Feed -->
-        <div id="feed-list" class="col-md-6">
+        <div id="feed-list" class="col-md-6 post-list">
             <div class="panel panel-success">
                 <!-- Default panel contents -->
                 <div class="panel-heading">News
                   <div class="feed-spinner pull-right"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
                 </div>
-                <ul class="list-group media-list post-list">
+                <ul class="list-group media-list">
                 </ul>
                 <div class="panel-body show-more text-center">
                   <a class="btn btn-success btn-sm" href="#">More</a>
@@ -76,12 +78,14 @@ layout: default
         </div>
 
         <!-- Posts -->
-        <div id="news-list" class="col-md-6">
+        <div id="news-list" class="col-md-6 post-list">
             <div class="panel panel-info">
                 <!-- Default panel contents -->
-                <div class="panel-heading">Announcements</div>
+                <div class="panel-heading">
+                  <a href="{{ '/announcement' | prepend: site.github.url }}">Announcements</a>
+                </div>
 
-                <ul class="list-group media-list post-list">
+                <ul class="list-group media-list">
                     {% for post in site.posts %}
                     <li class="list-group-item media">
                         <div class="media-left">

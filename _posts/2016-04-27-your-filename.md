@@ -2,7 +2,7 @@
 layout: post
 date: "2016-05-04 13:55 -0800"
 icon: wa
-tags: ""
+category: announcement
 published: true
 title: "Webinar -- Alaska stream temperature community: data storage, harvesting and dissemination"
 ---

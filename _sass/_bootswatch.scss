@@ -191,6 +191,12 @@
       background-color: $navbar-default-link-active-bg;
     }
   }
+
+  &-fat {
+    padding: 20px;
+    font-size: 100px;
+    width: 180px;
+  }
 }
 
 // Typography =================================================================

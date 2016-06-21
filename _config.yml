@@ -51,11 +51,24 @@ prose:
           element: "text"
           label: "Date"
           value: CURRENT_DATETIME
+      - name: "category"
+        field:
+          element: "select"
+          label: "Page Type"
+          placeholder: "Choose Type"
+          options:
+            - name: "Announcements"
+              value: "announcement"
+            - name: "Workshops"
+              value: "workshop"
+              resource: true
+              icon: "users"
+              description: "Download agendas, summaries, reports, and presentations for upcoming and previous workshops."
       - name: "icon"
         field:
           element: "select"
           label: "Logo"
-          placeholder: "Choose Tags"
+          placeholder: "Choose Logo"
           options:
             - name: "Default"
               value: "default"
@@ -73,6 +86,17 @@ prose:
               value: "wa"
       - name: "tags"
         field:
-          element: "text"
+          element: "multiselect"
           label: "Add Tags"
-          value: "announcement"
+          alterable: true
+          options:
+            - name: "arctic"
+              value: "arctic"
+            - name: "Alaska"
+              value: "Alaska"
+            - name: "climate change"
+              value: "climate change"
+            - name: "community"
+              value: "community"
+            - name: "webinar"
+              value: "webinar"

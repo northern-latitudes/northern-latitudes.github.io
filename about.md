@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+nav: true
 ---
 
 <p class="lead">Northern Latitudes - leadership of the five LCCs within Alaska and Northern Canada

@@ -5,6 +5,7 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    jekyll_config: grunt.file.readYAML('_config.yml'),
     sass: {
       options: {
         sourceMap: true,
@@ -64,7 +65,7 @@ module.exports = function (grunt) {
           './*.html',
           './*.md'
         ],
-        tasks: ['jekyll'],
+        tasks: ['default'],
         options: {},
       },
       data: {
@@ -92,7 +93,35 @@ module.exports = function (grunt) {
   // Load the plugin that provides the "uglify" task.
   //grunt.loadNpmTasks('grunt-sass');
 
+  //Generate index files for Jekyll categories
+  grunt.registerTask('category', 'Generate category indexes.', function() {
+    var jekyll = grunt.config('jekyll_config');
+    var cats = jekyll.prose.metadata._posts.find(function(itm) {
+      return itm.name === 'category';
+    });
+    var template = grunt.file.read('_category_idx_template.md');
+
+    if(grunt.file.isDir('categories')) {
+      grunt.file.delete('categories');
+    }
+
+    cats.field.options.forEach(function(itm) {
+      var data = {
+        title: itm.name,
+        link: itm.value,
+        icon: itm.icon,
+        description: itm.description,
+        resource: itm.resource ? true : false
+      };
+      content = grunt.template.process(template, {
+         data: data
+       });
+       grunt.file.write('./categories/' + itm.value + '.md', content);
+       grunt.log.writeln('Created the "'+ itm.value +'" category.');
+    });
+  });
+
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'uglify', 'minjson']);
+  grunt.registerTask('default', ['category','sass', 'uglify', 'minjson']);
 
 };

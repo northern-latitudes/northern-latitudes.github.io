@@ -3,7 +3,10 @@ layout: gallery
 title: Gallery
 permalink: /gallery/
 gallery: true
+resource: true
+icon: camera
 fullbase: http://data.arcticlcc.org/climate/
+description: "View images of climate change effects on ecosystems and associated cultural resources"
 ---
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2">

@@ -40,9 +40,9 @@ body {
 }
 
 .content-inner {
-  //background-color: $body-bg;
   min-height: 300px;
-  padding-top: 20px;
+  background-color: darken($brand-primary, 8);
+  padding: 20px 20px 0;
   //padding-bottom: 60px;
 
   .banner {
@@ -107,12 +107,12 @@ body {
       }
     }
   }
-  @media (min-width: 1450px) {
+  @media (min-width: 1475px) {
     .navbar-header {
       width: 45%;
     }
   }
-  @media (max-width: 1449px) {
+  @media (max-width: 1474px) {
     .navbar-brand {
       padding: 20px 0 0 15px;
       height: 110px;
@@ -271,9 +271,13 @@ footer.site-footer {
   }
 }
 
-#feed-list, #news-list {
+.post-list {
   .panel {
     border: 0;
+
+    div.panel-heading a{
+      color: inherit;
+    }
   }
 
   .media {
@@ -286,6 +290,7 @@ footer.site-footer {
 
   .media-left {
     width: 25%;
+    vertical-align: middle;
   }
 
   img.media-object {
@@ -379,6 +384,38 @@ footer.site-footer {
 
     >div.col-md-3:nth-child(4n+1) {
       clear: left;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+  .post-content .resources {
+
+    .media-left {
+      width: 15%;
+      }
+    }
+}
+
+.post-content .resources {
+  margin-top: 20px;
+
+  .resource {
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+
+    .list-group-item {
+      background-color: transparent;
+      border-radius: 0;
+      border: 0;
+    }
+
+    img.media-object {
+      background-color: $body-bg;
     }
   }
 }

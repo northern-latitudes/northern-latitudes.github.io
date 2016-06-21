@@ -5909,6 +5909,10 @@ button.close {
     line-height: 26px; }
   .btn-default:hover {
     background-color: #393a35; }
+  .btn-fat {
+    padding: 20px;
+    font-size: 100px;
+    width: 180px; }
 
 input,
 .form-control {
@@ -6676,7 +6680,8 @@ input,
 
 .content-inner {
   min-height: 300px;
-  padding-top: 20px; }
+  background-color: #106795;
+  padding: 20px 20px 0; }
   .content-inner .banner {
     margin-bottom: 15px; }
 
@@ -6710,10 +6715,10 @@ input,
       max-width: 100%; }
       .site-header .navbar-brand > img {
         max-width: 525px; } }
-  @media (min-width: 1450px) {
+  @media (min-width: 1475px) {
     .site-header .navbar-header {
       width: 45%; } }
-  @media (max-width: 1449px) {
+  @media (max-width: 1474px) {
     .site-header .navbar-brand {
       padding: 20px 0 0 15px;
       height: 110px; }
@@ -6809,19 +6814,22 @@ footer.site-footer {
     position: absolute;
     display: block; }
 
-#feed-list .panel, #news-list .panel {
+.post-list .panel {
   border: 0; }
+  .post-list .panel div.panel-heading a {
+    color: inherit; }
 
-#feed-list .media, #news-list .media {
+.post-list .media {
   margin-top: 0; }
 
-#feed-list .show-more, #news-list .show-more {
+.post-list .show-more {
   display: none; }
 
-#feed-list .media-left, #news-list .media-left {
-  width: 25%; }
+.post-list .media-left {
+  width: 25%;
+  vertical-align: middle; }
 
-#feed-list img.media-object, #news-list img.media-object {
+.post-list img.media-object {
   width: 100%; }
 
 .thb-primary {
@@ -6877,5 +6885,21 @@ footer.site-footer {
     clear: none; }
   .gallery.row > div.col-md-3:nth-child(4n+1) {
     clear: left; } }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .post-content .resources .media-left {
+    width: 15%; } }
+
+.post-content .resources {
+  margin-top: 20px; }
+  .post-content .resources .resource {
+    margin-bottom: 40px; }
+  .post-content .resources .post-list .list-group-item {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0; }
+  .post-content .resources .post-list img.media-object {
+    background-color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

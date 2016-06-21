@@ -15,7 +15,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    {% for my_page in site.pages %} {% if my_page.title %}
+                    {% for my_page in site.pages %} {% if my_page.nav %}
                     <li {% if my_page.url == page.url %}class="active"{% endif %}>
                       <a class="page-link" href="{{ my_page.url | prepend: site.github.url }}">
                         <span>{{ my_page.title }}</span>
