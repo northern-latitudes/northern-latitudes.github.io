@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2016-10-05'
+date: '2016-05-10'
 published: false
 title: Nome Coastal Resilience Workshop
 category: workshop
