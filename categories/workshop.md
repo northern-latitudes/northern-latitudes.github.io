@@ -28,13 +28,17 @@ icon: users
               <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
             </h4>
             <p>
-              {{ post.content | strip_html | truncatewords: 50 }}
-              {% assign val = post.content | strip_html | number_of_words %}
-              {% if val > 50 %}
+              {% if post.description == blank or post.description == nil %}
+                {{ post.content | strip_html | truncatewords: 50 }}
+                {% assign val = post.content | strip_html | number_of_words %}
+                {% if val > 50 %}
+              <a class="post-link small-text" href="{{ post.url | prepend: site.github.url }}">more</a>
+                {% endif %}
+              {% else %}
+                {{ post.description }}
               <a class="post-link small-text" href="{{ post.url | prepend: site.github.url }}">more</a>
               {% endif %}
             </p>
-
         </div>
     </li>
     {% unless loop.last %}<hr/>{% endunless %}

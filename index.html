@@ -17,9 +17,15 @@ layout: default
                 <img class="map-globe" src="assets/images/globe_400.png" alt="Location on Globe">
             </div>
             <div class="col-sm-6 col-md-7 col-lg-9">
-              <p class="small">The vast and largely intact landscapes of Alaska and Northwest Canada support unique natural and cultural resources that are valued locally and globally. As climate-related impacts and land use changes rapidly alter these social-ecological systems, a
-                  new approach to conservation is needed. Landscape Conservation Cooperatives (LCCs) are an international collaborative effort that identifies shared conservation goals and a means to achieve them. Northern Latitudes is the leadership of the five LCCs
-                  within Alaska and Northern Canada and the Alaska Climate Science Center staff.
+              <p class="small">
+                The vast and largely intact landscapes of Alaska and Northwest Canada support
+                unique natural and cultural resources that are valued locally and globally. As
+                climate-related impacts and land use changes rapidly alter these
+                social-ecological systems, a new approach to conservation is needed. <strong>Landscape
+                Conservation Cooperatives (LCCs)</strong> are an international collaborative effort that
+                identifies shared conservation goals and a means to achieve them. Northern
+                Latitudes is the leadership of the five LCCs within Alaska and Northern Canada
+                and the <strong>Alaska Climate Science Center</strong> staff.
               </p>
               <p><a class="btn btn-primary btn-lg" href="{{ '/about' | prepend: site.github.url }}" role="button">Learn more</a></p>
             </div>
@@ -86,7 +92,8 @@ layout: default
                 </div>
 
                 <ul class="list-group media-list">
-                    {% for post in site.posts %}
+                    {% assign posts = site.posts | where: "category", "announcement" %}
+                    {% for post in posts %}
                     <li class="list-group-item media">
                         <div class="media-left">
                             <a href="{{ post.url | prepend: site.github.url }}">
@@ -103,13 +110,17 @@ layout: default
                               <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
                             </h4>
                             <p>
-                              {{ post.content | strip_html | truncatewords: 50 }}
-                              {% assign val = post.content | strip_html | number_of_words %}
-                              {% if val > 50 %}
+                              {% if post.description == blank or post.description == nil %}
+                                {{ post.content | strip_html | truncatewords: 50 }}
+                                {% assign val = post.content | strip_html | number_of_words %}
+                                {% if val > 50 %}
+                              <a class="post-link small-text" href="{{ post.url | prepend: site.github.url }}">more</a>
+                                {% endif %}
+                              {% else %}
+                                {{ post.description }}
                               <a class="post-link small-text" href="{{ post.url | prepend: site.github.url }}">more</a>
                               {% endif %}
                             </p>
-
                         </div>
                     </li>
                     {% endfor %}

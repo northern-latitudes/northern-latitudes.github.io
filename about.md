@@ -5,7 +5,7 @@ permalink: /about/
 nav: true
 ---
 
-<p class="lead">Northern Latitudes - leadership of the five LCCs within Alaska and Northern Canada
+<p class="">Northern Latitudes - leadership of the five LCCs within Alaska and Northern Canada
 and the Alaska Climate Science Center staff - represents shared conservation
 priorities of hundreds of organizations: federal and state agencies, non-governmental
 organizations, and Tribes/First Nations across nearly 12 million square kilometers of
@@ -20,7 +20,7 @@ While the human footprint is relatively small, it’s a region experiencing unpr
 change. A warming climate and land use changes are rapidly altering these social-
 ecological systems, requiring us to approach conservation in innovative ways.
 
-# Conservation without Boundaries
+### Conservation without Boundaries
 
 [Landscape Conservation Cooperatives (LCC)](https://lccnetwork.org/) - self-directed conservation
 partnerships - bring holistic, collaborative strategies to help ensure the ability of

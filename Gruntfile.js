@@ -62,6 +62,7 @@ module.exports = function (grunt) {
           './_includes/**/*.html',
           './_layouts/**/*.html',
           './_posts/**/*.html',
+          './_posts/**/*.md',
           './*.html',
           './*.md'
         ],
