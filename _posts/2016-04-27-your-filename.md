@@ -1,10 +1,12 @@
 ---
 layout: post
-date: "2016-05-04 13:55 -0800"
+date: '2016-05-04 13:55 -0800'
 icon: wa
 category: announcement
-published: true
-title: "Webinar -- Alaska stream temperature community: data storage, harvesting and dissemination"
+published: false
+title: >-
+  Webinar -- Alaska stream temperature community: data storage, harvesting and
+  dissemination
 ---
 **Ryan Toohey**, _USGS Alaska Climate Science Center / USGS Alaska Science Center, Anchorage_
 
