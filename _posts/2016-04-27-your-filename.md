@@ -3,15 +3,11 @@ layout: post
 date: '2016-05-04 13:55 -0800'
 icon: wa
 category: announcement
-published: false
-title: >-
-  Webinar -- Alaska stream temperature community: data storage, harvesting and
-  dissemination
+published: true
+title: Announcing new NOAA products for Considering Climate in Coastal Conservation
 ---
-**Ryan Toohey**, _USGS Alaska Climate Science Center / USGS Alaska Science Center, Anchorage_
+## NOAA announces a new [Guide for Considering Climate Change in Coastal Conservation](https://coast.noaa.gov/digitalcoast/training/considering-climate-change.html), along with a companion [How to Consider Climate Change in Coastal Conservation](https://coast.noaa.gov/digitalcoast/training/coastal-conservation.html) self-guided online resource. These products are now live on NOAA’s Digital Coast under “Training” and will soon be found on the Green Infrastructure topics page. 
 
-### Wednesday May 4, 2016, 12 - 1 PM Alaska time
+The Guide does this by describing a stepwise approach to considering climate change in coastal conservation planning, with links to relevant tools, information and other resources. The steps should be familiar to those already practicing strategic conservation planning, but unlike other guides, these new products specifically focus on climate and habitat considerations of the coastal environment. 
 
-More information at [westernalaska.lcc.org](https://westernalaskalcc.org/projects/SitePages/webinars.aspx).
-
-In Fall 2015, a workshop was held to understand better how the Alaskan stream temperature community currently manages their data. While some State and Federal agencies have their own data formats and data management guidelines, many smaller data collecting entities do not have compatible protocols or databases.  As a result, State and Federal agencies are unlikely to be able to host and distribute the data of their smaller partners, yet all partner data are important for assessing landscape or regional level change occuring throughout Alaska. The workshop addressed five questions: 1) What are the essential metadata and formatting requirements for non-agency data to be aggregated with agency data?, 2) How can we utilize existing resources and platforms to harvest/access and store environmental data from a wide variety of stakeholders for multi-scale analyeses?, 3) What lessons, barriers and sollutions can we learn from recent statewide and national efforts?, 4) What are the data provider requirements for dissemination and usage of this data?, 5) How can we increase reliability and sustainability (both financially and in terms of partner buy-in) of such data systems? The presentation will focus on the workshop participants' answers to these questions.
+The How-To offers brief instruction on each step from the Guide and provides quick access to the most applicable tools when working through each step. This interactive online resource allows users to dive into whichever stage of the process is most relevant to them. It will be updated periodically with new resources.
