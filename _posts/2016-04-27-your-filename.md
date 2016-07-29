@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2016-05-04 13:55 -0800'
+date: '2016-07-29 13:55 -0800'
 icon: wa
 category: announcement
 published: true
