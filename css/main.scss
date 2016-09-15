@@ -47,6 +47,15 @@ body {
 
   .banner {
     margin-bottom: 15px;
+
+    img {
+      max-height: 75px;
+      border: 1px solid $gray-lighter;
+    }
+
+    .media {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: $grid-float-breakpoint) {

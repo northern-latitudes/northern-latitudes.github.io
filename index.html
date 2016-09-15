@@ -3,10 +3,26 @@ layout: default
 ---
 <div class="home">
     {% for banner in site.data.banner %}
+    {% if banner.image %}
     <a class="btn btn-{{ banner.color }} btn-block banner text-wrap" href="{{ banner.link }}">
-        <b> <i class="fa fa-{{ banner.icon }}"> </i>
+        <b>
+         </b>
+        <div class="media">
+          <div class="media-left media-middle">
+              <img src="{{banner.image}}" alt="Banner image" />
+          </div>
+          <div class="media-body">
+            {{ banner.text }}
+          </div>
+        </div>
+    </a>
+    {% else %}
+    <a class="btn btn-{{ banner.color }} btn-block banner text-wrap" href="{{ banner.link }}">
+        <b><i class="fa fa-{{ banner.icon }}"> </i>
         {{ banner.text }} </b>
     </a>
+    {% endif %}
+
     {% endfor %}
     <div class="jumbotron">
         <div class="page-header">

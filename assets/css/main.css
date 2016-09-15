@@ -6684,6 +6684,11 @@ input,
   padding: 20px 20px 0; }
   .content-inner .banner {
     margin-bottom: 15px; }
+    .content-inner .banner img {
+      max-height: 75px;
+      border: 1px solid #F8F5F0; }
+    .content-inner .banner .media {
+      margin-top: 0; }
 
 .jumbotron .page-header {
   margin-top: 0; }
