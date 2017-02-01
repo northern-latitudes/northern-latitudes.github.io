@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2017-02-01 10:07 -0900'
-published: false
+published: true
 title: Kotzebue Coastal Resilience Workshop - December 2016
 category: workshop
 description: Kotzebue Workshop
