@@ -15,10 +15,10 @@ members:
     email: paul_leonard@fws.gov
     phone: (907) 456-0445
 
-  - name: Jim Lawler
-    title: Steering Committee Chair, National Park Service
-    email: jim_lawler@nps.gov
-
   - name: Sue Rodman
-    title: Steering Committee Vice-Chair, Alaska Department of Fish and Game
+    title: Steering Committee Chair, Alaska Department of Fish and Game
     email: sue.rodman@alaska.gov
+
+  - name: Stacie Fritz
+    title: Steering Committee Vice-Chair, Bureau of Land Management
+    email: s05mcint@blm.gov
